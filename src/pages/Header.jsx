@@ -80,6 +80,7 @@ const Header = () => {
         <li
           onClick={() => {
             localStorage.clear();
+            window.location.reload();
             navigate('/');
           }}
         >
