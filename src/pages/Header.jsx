@@ -17,7 +17,7 @@ const Header = () => {
   return (
     <header className="header__container">
       <section className="header__section">
-        <img src={userData?.user?.userImg} alt="" />
+        <img src="/perfil.png" alt="" />
         <h3>
           {userData?.user?.name} {userData?.user?.lastName}
         </h3>
