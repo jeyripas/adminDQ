@@ -1,0 +1,42 @@
+.filterOrders__contianer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.8em;
+    justify-content: start;
+    align-items: start;
+    border-bottom: 1.5px solid #ccc;
+    padding-bottom: 1em;
+}
+
+.filterOrders__contianer div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5em;
+    color: var(--body-gray);
+}
+
+.filterOrders__contianer label {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.filterOrders__contianer input {
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.filterOrders__contianer select {
+    font-size: 1.1em;
+    padding: 0.2em;
+    cursor: pointer;
+}
+
+.filterOrders__contianer p {
+    color: var(--body-red);
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+}

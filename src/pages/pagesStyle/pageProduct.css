@@ -1,0 +1,215 @@
+.page__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.pageCategories__section {
+    position: relative;
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+.pageCategories__articles_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: rgb(255, 255, 255);
+}
+
+.pageCategories__iconsMenu__container {
+    display: none;
+}
+
+
+.pageCategories__selectCategory_container {
+    position: relative;
+    display: flex;
+    gap: 0.5em;
+}
+
+
+.pageCategories__selectCategory_container span {
+    font-size: 1.1em;
+    font-weight: 700;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.pageCategories__selectCategory_container p {
+    width: 170px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: 700;
+    color: var(--text-color-black);
+    gap: 1em;
+    z-index: 5;
+    padding: 0.5em;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.pageCategories__selectCategory_container p:hover {
+    color: var(--body-red);
+    transition: 0.5s ease
+}
+
+.pageCategories__selectCategory_container i {
+    font-size: 1.5em;
+}
+
+.pageCategories__closeSelectCategory {
+    position: absolute;
+    top: 100%;
+    width: 170px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    transform: translateY(20%);
+    opacity: 0;
+    z-index: -1;
+    background-color: var(--body-white);
+    box-shadow: 0em 0em 0.5em 0.05em rgb(130, 130, 130);
+    transition: all 0.5s ease;
+
+}
+
+.pageCategories__openSelectCategory {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 2;
+}
+
+.pageCategories__selectCategory_container li {
+    font-size: 1em;
+    color: var(--body-gray);
+    font-weight: 600;
+    padding: 0.5em;
+    border-bottom: 0.1em solid rgb(214, 214, 214);
+    cursor: pointer;
+    transition: 0.5s ease
+}
+
+.pageCategories__selectCategory_container li:hover {
+    color: var(--body-red);
+    transition: 0.5s ease
+}
+
+/* pageCategories__createCategoryProduct__contianer */
+
+.pageCategories__createCategoryProduct__contianer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.pageCategories__createCategoryProduct__contianer p {
+    font-size: 0.75em;
+    font-weight: 500;
+    background-color: var(--body-gray);
+    color: var(--body-white);
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.pageCategories__createCategoryProduct__contianer p:hover {
+    background-color: var(--body-red);
+    transition: 0.5s ease;
+}
+
+@media (max-width: 700px) {
+
+    .page__container {
+        width: 100%;
+    }
+
+    .pageCategories__iconsMenu__container {
+        width: 100%;
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+        z-index: 5;
+    }
+
+    .pageCategories__iconsMenu__container i {
+        font-size: 8vw;
+        color: var(--body-gray);
+        cursor: pointer;
+    }
+
+    .pageCategories__articles_container {
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+        transform: translateY(0);
+        opacity: 1;
+        border-top: 0.1em solid var(--body-black);
+        transition: all 0.5s ease;
+        z-index: 2;
+    }
+
+    .pageCategories__closeArticles_container {
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: all 0.5s ease;
+        z-index: -1;
+    }
+
+    .pageCategories__selectCategory_container {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pageCategories__selectCategory_container span {
+        font-size: 4.5vw;
+    }
+
+    .pageCategories__selectCategory_container p {
+        width: auto;
+        font-size: 4.5vw;
+    }
+
+    .pageCategories__closeSelectCategory {
+        width: auto;
+    }
+
+    .pageCategories__closeSelectCategory li {
+        font-size: 4.5vw;
+    }
+
+    .pageCategories__createCategoryProduct__contianer {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    .pageCategories__createCategoryProduct__contianer p {
+        font-size: 4.5vw;
+    }
+}

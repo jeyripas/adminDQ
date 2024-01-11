@@ -1,0 +1,151 @@
+.yourClients__sectionOne {
+    width: 100%;
+    background-color: var(--body-white);
+    height: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding: 1em;
+}
+
+/* .filterClients__container */
+
+.filterClients__container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    gap: 2em;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1em;
+}
+
+.filterClients__container div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3em;
+}
+
+.filterClients__container label {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: var(--body-gray);
+}
+
+.filterClients__container input {
+    border: 1px solid var(--body-gray);
+    border-radius: 3px;
+    font-size: 1em;
+}
+
+.filterClients__container button {
+    font-size: 1.2em;
+    padding: 0.3em 1em;
+    background-color: var(--body-black);
+    color: var(--body-white);
+    border-radius: 5px;
+}
+
+
+
+.tableClients__contianer {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tableClients__contianer img {
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.tableClients__contianer th,
+.tableClients__contianer td {
+    border: 1px solid var(--body-darkBlue);
+    padding: 8px;
+    text-align: left;
+    font-weight: 500;
+    color: var(--body-gray);
+}
+
+.tableClients__contianer th {
+    border: 1px solid #e2e2e2;
+    background-color: var(--body-darkBlue);
+    color: var(--body-white);
+    font-size: 1.1em;
+}
+
+.tableClients__contianer tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.tableClients__contianer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 0.5em;
+}
+
+.tableClients__contianer p {
+    color: var(--body-black);
+    cursor: pointer;
+}
+
+.tableClients__contianer p:hover {
+    color: rgb(17, 83, 216);
+}
+
+.tableClients__contianer a {
+    color: var(--body-black);
+    cursor: pointer;
+}
+
+.tableClients__contianer a:hover {
+    color: var(--body-red);
+}
+
+/* yourClients__pages */
+
+.yourClients__pages {
+    width: 100%;
+    background-color: var(--body-white);
+    color: var(--body-black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+.yourClients__pages div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.yourClients__pages i {
+    font-size: 1.4em;
+    cursor: pointer;
+}
+
+.yourClients__pages i:hover {
+    color: var(--body-red);
+}
+
+.yourClients__pages p {
+    font-weight: 500;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.yourClients__pages__pActive {
+    color: var(--body-red);
+}

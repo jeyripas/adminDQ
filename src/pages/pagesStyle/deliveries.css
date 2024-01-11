@@ -1,0 +1,32 @@
+.cardDelivery__container {
+    width: 100%;
+    max-width: 400px;
+    height: 350px;
+}
+
+.cardDelivery__div {
+    width: 100%;
+    max-width: 400px;
+    height: 350px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    background-color: var(--body-white);
+    border-radius: 0.5em;
+    box-shadow: 0em 0em 0.5em 0.05em rgb(208, 208, 208);
+    overflow: hidden;
+}
+
+.cardDelivery__div article {
+    padding: 0.5em;
+}
+
+.cardDelivery__div span {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    font-size: 1.2em;
+    font-weight: 600;
+}
