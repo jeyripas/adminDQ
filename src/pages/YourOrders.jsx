@@ -6,6 +6,8 @@ import FilterOrders from '../components/yourOrders/FilterOrders';
 import './pagesStyle/yourOrders.css';
 import TableOrders from '../components/yourOrders/TableOrders';
 import UpdateOrder from '../components/yourOrders/UpdateOrder';
+import io from 'socket.io-client';
+import { toast } from 'react-toastify';
 
 const YourOrders = () => {
   const getFormattedDate = () => {
@@ -15,16 +17,42 @@ const YourOrders = () => {
         ? `0${currentDate.getDate()}`
         : currentDate.getDate();
     const month = currentDate.getMonth() + 1;
-    return `${day}-${
+    return `${day}/${
       month < 10 ? `0${month}` : month
-    }-${currentDate.getFullYear()}`;
+    }/${currentDate.getFullYear()}`;
   };
 
   const [crud, setCrud] = useState('');
   const [allOrders, setAllOrders] = useState();
   const [selectOrder, setselectOrder] = useState();
   const [date, setdate] = useState(getFormattedDate());
+  const [notification, setNotification] = useState(false);
   const [statusOrder, setstatusOrder] = useState('onTheWay');
+
+  let socket = null;
+
+  useEffect(() => {
+    socket = io(
+      'https://nodejsecomercedq-production-c9c0.up.railway.app'
+    );
+  }, []);
+
+  useEffect(() => {
+    const handleValidPay = (alldata) => {
+      if (alldata.data === 'approved') {
+        toast.error('Hubo un error al crear el usuario');
+        setNotification(!notification);
+      }
+    };
+
+    // Agrega el evento 'validPay' solo una vez
+    socket.on('validPay', handleValidPay);
+
+    // Limpia el evento 'validPay' cuando el componente se desmonta
+    return () => {
+      socket.off('validPay', handleValidPay);
+    };
+  }, [socket?.on('validPay')]); // Agrega 'notification' como dependencia si es necesario
 
   useEffect(() => {
     const url = `${
@@ -35,9 +63,7 @@ const YourOrders = () => {
       .get(url, config)
       .then((res) => setAllOrders(res.data))
       .catch((err) => console.log(err));
-  }, [date, statusOrder, crud]);
-
-  console.log(getFormattedDate());
+  }, [date, statusOrder, crud, notification]);
 
   return (
     <div className="sections__container">

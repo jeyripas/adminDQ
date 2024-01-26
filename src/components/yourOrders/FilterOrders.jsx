@@ -8,13 +8,20 @@ const FilterOrders = ({
   getFormattedDate,
 }) => {
   const formatToYYYYMMDD = (inputDate) => {
-    const [day, month, year] = inputDate.split('-');
+    const [day, month, year] = inputDate.split('/');
     return `${year}-${month}-${day}`;
   };
 
+  const formatToDateFilter = (inputDate) => {
+    const [year, month, day] = inputDate.split('-');
+    return `${day}/${month}/${year}`;
+  };
+
+  console.log(date);
+
   const onChangeDate = (e) => {
     const selectedDate = e?.target?.value;
-    setdate(formatToYYYYMMDD(selectedDate));
+    setdate(formatToDateFilter(selectedDate));
   };
 
   const deleteFilters = () => {
