@@ -8,6 +8,7 @@ import TableOrders from '../components/yourOrders/TableOrders';
 import UpdateOrder from '../components/yourOrders/UpdateOrder';
 import io from 'socket.io-client';
 import { toast } from 'react-toastify';
+import notificationSound from '/notification.mp3';
 
 const YourOrders = () => {
   const getFormattedDate = () => {
@@ -40,7 +41,19 @@ const YourOrders = () => {
   useEffect(() => {
     const handleValidPay = (alldata) => {
       if (alldata.data === 'approved') {
-        toast.error('Hubo un error al crear el usuario');
+        toast('🍕 Tiene una Orden Nueva! 🍕', {
+          position: 'top-right',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'dark',
+          // transition: Bounce,
+        });
+        const audioElement = new Audio(notificationSound);
+        audioElement.play();
         setNotification(!notification);
       }
     };
