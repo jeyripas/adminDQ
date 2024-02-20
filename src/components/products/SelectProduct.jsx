@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import CardPizza from './selectCardPizza/CardPizza';
-import CreatePizza from './crudPizzas/CreatePizza';
 import axios from 'axios';
+import CreateProduct from './crudProduct/CreateProduct';
+import CardProduct from './selectCardProduct/CardProduct';
 
-const SelectPizzas = ({
+const SelectProduct = ({
   selectCategory,
   crud,
   setCrud,
@@ -45,7 +45,7 @@ const SelectPizzas = ({
           {selectCategory === 'Todos' ? 'Todos' : selectCategory.name}
         </h2>
         <p onClick={() => setCrud('createPizza')}>Crear Producto</p>
-        <CreatePizza
+        <CreateProduct
           categories={categories}
           setCrud={setCrud}
           crud={crud}
@@ -55,7 +55,7 @@ const SelectPizzas = ({
         {selectCategory === 'Todos'
           ? allProducts?.categoryProducts.map((pizza) =>
               pizza.products.map((product) => (
-                <CardPizza
+                <CardProduct
                   key={product.id} // Aquí estás usando pizza.id como clave
                   pizza={product}
                   crud={crud}
@@ -64,7 +64,7 @@ const SelectPizzas = ({
               ))
             )
           : productsCategory?.products?.map((pizza) => (
-              <CardPizza
+              <CardProduct
                 key={pizza.id}
                 pizza={pizza}
                 crud={crud}
@@ -76,4 +76,4 @@ const SelectPizzas = ({
   );
 };
 
-export default SelectPizzas;
+export default SelectProduct;

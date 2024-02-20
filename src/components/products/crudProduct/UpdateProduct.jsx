@@ -4,7 +4,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import config from '../../../utils/getToken';
 
-const UpdatePizza = ({ crud, setCrud, pizza, setclickEditImg }) => {
+const UpdateProduct = ({ crud, setCrud, pizza, setclickEditImg }) => {
   const { register, handleSubmit, reset } = useForm();
 
   const submit = (data) => {
@@ -89,4 +89,4 @@ const UpdatePizza = ({ crud, setCrud, pizza, setclickEditImg }) => {
   );
 };
 
-export default UpdatePizza;
+export default UpdateProduct;

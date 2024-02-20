@@ -17,8 +17,6 @@ const FilterOrders = ({
     return `${day}/${month}/${year}`;
   };
 
-  console.log(date);
-
   const onChangeDate = (e) => {
     const selectedDate = e?.target?.value;
     setdate(formatToDateFilter(selectedDate));

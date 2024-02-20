@@ -1,9 +1,9 @@
 import React from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify';
-import config from '../../../../utils/getToken';
+import config from '../../../../../utils/getToken';
 
-const DeleteOptionPizza = ({ clickOptionData, crud, setCrud }) => {
+const DeleteOptionProduct = ({ clickOptionData, crud, setCrud }) => {
   const handleSubmit = () => {
     const url = `${import.meta.env.VITE_URL_API}/product-option/${
       clickOptionData.id
@@ -56,4 +56,4 @@ const DeleteOptionPizza = ({ clickOptionData, crud, setCrud }) => {
   );
 };
 
-export default DeleteOptionPizza;
+export default DeleteOptionProduct;

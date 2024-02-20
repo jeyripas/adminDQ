@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import config from '../../../utils/getToken';
 import ViewSelectImg from '../../../hooks/ViewSelectImg';
 
-const UpdatePizzaImg = ({
+const UpdateProductImg = ({
   crud,
   setCrud,
   pizza,
@@ -89,4 +89,4 @@ const UpdatePizzaImg = ({
     </div>
   );
 };
-export default UpdatePizzaImg;
+export default UpdateProductImg;

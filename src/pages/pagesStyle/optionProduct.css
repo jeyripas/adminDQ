@@ -158,12 +158,12 @@
     justify-content: space-between;
     align-items: center;
     border-top: 0.15em solid var(--text-color-gray);
-    gap: 2em;
+    gap: 1em;
 
 }
 
 .optionProduct__addOptionsExtras p {
-    padding: 0.3em 1em;
+    padding: 0.3em 0.5em;
     background-color: var(--body-white);
     color: var(--body-gray);
     font-weight: 600;
@@ -171,6 +171,7 @@
     border: 0.1em solid var(--body-gray);
     border-radius: 0.5em;
     cursor: pointer;
+    text-align: center;
     transition: all 0.5s ease;
 }
 

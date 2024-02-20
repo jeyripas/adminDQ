@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import CreateCategoryPizza from './crudCategoryPizza/CreateCategoryPizza';
-import { useParams } from 'react-router-dom';
-import UpdateCategoryPizza from './crudCategoryPizza/UpdateCategoryPizza';
-import DeleteCategoryPizza from './crudCategoryPizza/DeleteCategoryPizza';
+import React, { useState } from 'react';
+import CreateCategoryProduct from './crudCategoryProduct/CreateCategoryProduct';
+import UpdateCategoryProduct from './crudCategoryProduct/UpdateCategoryProduct';
+import DeleteCategoryProduct from './crudCategoryProduct/DeleteCategoryProduct';
 
-const CategoryPizzas = ({
+const CategoryProduct = ({
   crud,
   setCrud,
   setselectCategory,
@@ -80,7 +78,7 @@ const CategoryPizzas = ({
           <p onClick={() => setCrud('createCategory')}>
             Crear Categoría
           </p>
-          <CreateCategoryPizza
+          <CreateCategoryProduct
             setCrud={setCrud}
             crud={crud}
             id={id}
@@ -88,7 +86,7 @@ const CategoryPizzas = ({
           <p onClick={() => setCrud('updateCategory')}>
             Editar Categoría
           </p>
-          <UpdateCategoryPizza
+          <UpdateCategoryProduct
             setCrud={setCrud}
             crud={crud}
             categories={categories}
@@ -96,7 +94,7 @@ const CategoryPizzas = ({
           <p onClick={() => setCrud('deleteCategory')}>
             Eliminar Categoría
           </p>
-          <DeleteCategoryPizza
+          <DeleteCategoryProduct
             setCrud={setCrud}
             crud={crud}
             categories={categories}
@@ -107,4 +105,4 @@ const CategoryPizzas = ({
   );
 };
 
-export default CategoryPizzas;
+export default CategoryProduct;

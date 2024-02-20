@@ -1,26 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { toast } from 'react-toastify';
-import config from '../../../../utils/getToken';
+import config from '../../../../../utils/getToken';
 
-const CreateExtraPizza = ({ crud, setCrud, pizza }) => {
+const UpdateExtraProduct = ({ crud, setCrud, extra }) => {
   const { register, handleSubmit, reset } = useForm();
-
   const submit = (data) => {
     const url = `${import.meta.env.VITE_URL_API}/product-extra/${
-      pizza.id
+      extra.id
     }`;
 
     axios
-      .post(url, data, config)
-
+      .patch(url, data, config)
       .then((res) => {
-        toast.success('El extra  se creo exitosamente');
+        toast.success('El extra  se edito exitosamente');
+        setCrud('');
       })
       .catch((err) => {
         console.log(err);
-        toast.error('Hubo un error al crear el extra ');
+        toast.error('Hubo un error al editar el extra');
       });
     reset();
   };
@@ -28,22 +27,24 @@ const CreateExtraPizza = ({ crud, setCrud, pizza }) => {
   return (
     <div
       className={`crud__container  ${
-        crud === 'createExtraProduct' ? '' : 'closeCrud__container'
+        crud === 'updateExtraProduct' ? '' : 'closeCrud__container'
       }`}
     >
       <i onClick={() => setCrud('')} className="bx bxs-x-circle"></i>
       <form className="crud__form" onSubmit={handleSubmit(submit)}>
-        <h3>Crear Extra para la Pizza {pizza.name}</h3>
+        <h3>Editar Extra</h3>
+
         <div className="crud__div">
           <label htmlFor="name">Nombre:</label>
           <input
             {...register('name')}
             id="name"
             type="text"
-            placeholder="queso extra"
+            defaultValue={extra.name}
             required
           />
         </div>
+
         <div className="crud__div">
           <label htmlFor="price">precio:</label>
           <input
@@ -55,17 +56,17 @@ const CreateExtraPizza = ({ crud, setCrud, pizza }) => {
             })}
             id="price"
             type="text"
-            placeholder="2"
+            defaultValue={extra.price}
             required
           />
         </div>
 
         <button type="submit" className="crud__button">
-          Crear Extra
+          Editar Extra
         </button>
       </form>
     </div>
   );
 };
 
-export default CreateExtraPizza;
+export default UpdateExtraProduct;

@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import config from '../../../utils/getToken';
 import ViewSelectImg from '../../../hooks/ViewSelectImg';
 
-const CreatePizza = ({ crud, setCrud, categories }) => {
+const CreateProduct = ({ crud, setCrud, categories }) => {
   const {
     selectedImage,
     selectedFile,
@@ -47,8 +47,6 @@ const CreatePizza = ({ crud, setCrud, categories }) => {
         deleteSelectImgClick();
       });
   };
-
-  const defaultColor = '#rrggbb';
 
   return (
     <div
@@ -149,4 +147,4 @@ const CreatePizza = ({ crud, setCrud, categories }) => {
     </div>
   );
 };
-export default CreatePizza;
+export default CreateProduct;

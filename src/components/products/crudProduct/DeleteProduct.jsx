@@ -3,7 +3,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import config from '../../../utils/getToken';
 
-const DeletePizza = ({ pizza, crud, setCrud, setclickEditImg }) => {
+const DeleteProduct = ({ pizza, crud, setCrud, setclickEditImg }) => {
   const handleSubmit = () => {
     const url = `${import.meta.env.VITE_URL_API}/product/${pizza.id}`;
 
@@ -57,4 +57,4 @@ const DeletePizza = ({ pizza, crud, setCrud, setclickEditImg }) => {
   );
 };
 
-export default DeletePizza;
+export default DeleteProduct;

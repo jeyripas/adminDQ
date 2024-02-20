@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import DeleteSection from './crudSection/DeleteSection';
-import UpdateSection from './crudSection/UpdateSection';
 
 const CardSection = ({ section, setCrud, crud }) => {
   return (

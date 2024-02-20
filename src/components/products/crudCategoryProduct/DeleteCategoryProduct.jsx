@@ -4,7 +4,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import config from '../../../utils/getToken';
 
-const DeleteCategoryPizza = ({ crud, setCrud, categories }) => {
+const DeleteCategoryProduct = ({ crud, setCrud, categories }) => {
   const { handleSubmit } = useForm();
   const [selectedCategory, setSelectedCategory] = useState(null);
 
@@ -72,4 +72,4 @@ const DeleteCategoryPizza = ({ crud, setCrud, categories }) => {
   );
 };
 
-export default DeleteCategoryPizza;
+export default DeleteCategoryProduct;

@@ -3,12 +3,12 @@ import './pagesStyle/pageProduct.css';
 import './pagesStyle/selectProduct.css';
 import './pagesStyle/cardProduct.css';
 import './pagesStyle/optionProduct.css';
-import CategoryPizzas from '../components/pizzas/CategoryPizzas';
-import SelectPizzas from '../components/pizzas/SelectPizzas';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import CategoryProduct from '../components/products/CategoryProduct';
+import SelectProduct from '../components/products/SelectProduct';
 
-const Pizzas = () => {
+const Products = () => {
   const { id } = useParams();
   const [crud, setCrud] = useState('');
   const [categories, setCategories] = useState();
@@ -27,7 +27,7 @@ const Pizzas = () => {
 
   return (
     <div className="page__container">
-      <CategoryPizzas
+      <CategoryProduct
         setCrud={setCrud}
         crud={crud}
         setselectCategory={setselectCategory}
@@ -35,7 +35,7 @@ const Pizzas = () => {
         categories={categories}
         id={id}
       />
-      <SelectPizzas
+      <SelectProduct
         crud={crud}
         setCrud={setCrud}
         selectCategory={selectCategory}
@@ -46,4 +46,4 @@ const Pizzas = () => {
   );
 };
 
-export default Pizzas;
+export default Products;

@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { toast } from 'react-toastify';
-import config from '../../../../utils/getToken';
+import config from '../../../../../utils/getToken';
 
-const UpdateOptionPizza = ({ crud, setCrud, clickOptionData }) => {
+const UpdateOptionProduct = ({ crud, setCrud, clickOptionData }) => {
   const { register, handleSubmit, reset } = useForm();
 
   const submit = (data) => {
@@ -15,12 +15,12 @@ const UpdateOptionPizza = ({ crud, setCrud, clickOptionData }) => {
     axios
       .patch(url, data, config)
       .then((res) => {
-        toast.success('El extra  se edito exitosamente');
+        toast.success('La opcion  se edito exitosamente');
         setCrud('');
       })
       .catch((err) => {
         console.log(err);
-        toast.error('Hubo un error al editar el extra');
+        toast.error('Hubo un error al editar la opcion');
       });
     reset();
   };
@@ -91,4 +91,4 @@ const UpdateOptionPizza = ({ crud, setCrud, clickOptionData }) => {
   );
 };
 
-export default UpdateOptionPizza;
+export default UpdateOptionProduct;

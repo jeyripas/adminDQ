@@ -2,13 +2,13 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { toast } from 'react-toastify';
-import config from '../../../../utils/getToken';
+import config from '../../../../../utils/getToken';
 
-const CreateOptionPizza = ({ crud, setCrud, pizza }) => {
+const CreateExtraProduct = ({ crud, setCrud, pizza }) => {
   const { register, handleSubmit, reset } = useForm();
 
   const submit = (data) => {
-    const url = `${import.meta.env.VITE_URL_API}/product-option/${
+    const url = `${import.meta.env.VITE_URL_API}/product-extra/${
       pizza.id
     }`;
 
@@ -16,11 +16,11 @@ const CreateOptionPizza = ({ crud, setCrud, pizza }) => {
       .post(url, data, config)
 
       .then((res) => {
-        toast.success('La Opción  se creo exitosamente');
+        toast.success('El extra  se creo exitosamente');
       })
       .catch((err) => {
         console.log(err);
-        toast.error('Hubo un error al crear la Opción ');
+        toast.error('Hubo un error al crear el extra ');
       });
     reset();
   };
@@ -28,27 +28,19 @@ const CreateOptionPizza = ({ crud, setCrud, pizza }) => {
   return (
     <div
       className={`crud__container  ${
-        crud === 'createOptionProduct' ? '' : 'closeCrud__container'
+        crud === 'createExtraProduct' ? '' : 'closeCrud__container'
       }`}
     >
       <i onClick={() => setCrud('')} className="bx bxs-x-circle"></i>
       <form className="crud__form" onSubmit={handleSubmit(submit)}>
-        <h3>Crear Opción para la Pizza {pizza.name}</h3>
+        <h3>Crear Extra para la Pizza {pizza.name}</h3>
         <div className="crud__div">
           <label htmlFor="name">Nombre:</label>
           <input
             {...register('name')}
             id="name"
             type="text"
-            required
-          />
-        </div>
-        <div className="crud__div">
-          <label htmlFor="size">tamaño:</label>
-          <input
-            {...register('size')}
-            id="size"
-            type="text"
+            placeholder="queso extra"
             required
           />
         </div>
@@ -63,25 +55,17 @@ const CreateOptionPizza = ({ crud, setCrud, pizza }) => {
             })}
             id="price"
             type="text"
-            required
-          />
-        </div>
-        <div className="crud__div">
-          <label htmlFor="discount">Descuento:</label>
-          <input
-            {...register('discount')}
-            id="discount"
-            type="number"
+            placeholder="2"
             required
           />
         </div>
 
         <button type="submit" className="crud__button">
-          Crear Opción
+          Crear Extra
         </button>
       </form>
     </div>
   );
 };
 
-export default CreateOptionPizza;
+export default CreateExtraProduct;

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import OptionsCardPizza from './OptionsCardPizza';
-import DeletePizza from '../crudPizzas/DeletePizza';
-import UpdatePizza from '../crudPizzas/UpdatePizza';
-import UpdatePizzaImg from '../crudPizzas/UpdatePizzaImg';
+import UpdateProductImg from '../crudProduct/UpdateProductImg';
+import OptionsCardProduct from './OptionsCardProduct';
+import UpdateProduct from '../crudProduct/UpdateProduct';
+import DeleteProduct from '../crudProduct/DeleteProduct';
 
-const CardPizza = ({ pizza, crud, setCrud }) => {
+const CardProduct = ({ pizza, crud, setCrud }) => {
   const [viewOptionsProduct, setviewOptionsProduct] = useState(false);
   const [clickEditImg, setclickEditImg] = useState();
 
@@ -26,7 +26,7 @@ const CardPizza = ({ pizza, crud, setCrud }) => {
           }}
         ></i>
         {clickEditImg?.id === pizza.id ? (
-          <UpdatePizzaImg
+          <UpdateProductImg
             pizza={pizza}
             crud={crud}
             setCrud={setCrud}
@@ -49,7 +49,7 @@ const CardPizza = ({ pizza, crud, setCrud }) => {
         >
           <i className="bx bx-menu"></i> Opciones
         </p>
-        <OptionsCardPizza
+        <OptionsCardProduct
           pizza={pizza}
           crud={crud}
           setCrud={setCrud}
@@ -66,7 +66,7 @@ const CardPizza = ({ pizza, crud, setCrud }) => {
           ></i>
 
           {clickEditImg?.id === pizza.id ? (
-            <UpdatePizza
+            <UpdateProduct
               pizza={pizza}
               crud={crud}
               setCrud={setCrud}
@@ -83,7 +83,7 @@ const CardPizza = ({ pizza, crud, setCrud }) => {
             }}
           ></i>
           {clickEditImg?.id === pizza.id ? (
-            <DeletePizza
+            <DeleteProduct
               pizza={pizza}
               crud={crud}
               setCrud={setCrud}
@@ -98,4 +98,4 @@ const CardPizza = ({ pizza, crud, setCrud }) => {
   );
 };
 
-export default CardPizza;
+export default CardProduct;
