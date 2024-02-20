@@ -68,8 +68,35 @@ const ClientOrders = ({ dataClient }) => {
                       {product.totalPrice}
                     </li>
                     <li>
-                      pedido: {product.name} {product.option}{' '}
-                      {product.extras.map((extra) => extra.name)}
+                      pedido: {product.name} {product.option},{' '}
+                      {product.extras.length > 0 ? (
+                        <p>
+                          pizzas:
+                          {product.pizzas.map(
+                            (pizza) => ` ${pizza.name},`
+                          )}
+                        </p>
+                      ) : (
+                        ''
+                      )}
+                      {product.extras.length > 0 ? (
+                        <p>
+                          extras:
+                          {product.extras.map(
+                            (extra) => ` ${extra.name},`
+                          )}
+                        </p>
+                      ) : (
+                        ''
+                      )}
+                      {product.drink ? (
+                        <p>
+                          bebida:
+                          {product.drink}
+                        </p>
+                      ) : (
+                        ''
+                      )}
                     </li>
                   </ul>
                 ))}

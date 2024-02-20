@@ -28,14 +28,14 @@ const TableUsers = ({ allUsers, setSelectUser, setCrud }) => {
               <td>{user.phoneNumber}</td>
               <td>{user.address}</td>
               <td>
-                <p
+                <a
                   onClick={() => {
                     setSelectUser(user);
                     setCrud('updateUser');
                   }}
                 >
                   editar
-                </p>
+                </a>
               </td>
               <td>
                 <a
