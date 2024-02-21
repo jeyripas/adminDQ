@@ -23,8 +23,6 @@ const DataClient = () => {
       });
   }, []);
 
-  //   console.log(dataClient);
-
   return (
     <div className="dataClient__container">
       <section className="dataClient__sectionOne">

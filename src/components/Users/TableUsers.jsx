@@ -19,7 +19,7 @@ const TableUsers = ({ allUsers, setSelectUser, setCrud }) => {
           {allUsers?.map((user) => (
             <tr key={user.id}>
               <td>
-                <img src={user.userImg} alt="" />
+                <img src="/perfil.png" alt="" />
               </td>
               <td>
                 {user.name} {user.lastName}
