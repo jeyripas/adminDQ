@@ -68,6 +68,18 @@ const Header = () => {
         </li>
         <li>
           <Link
+            to="/configuration"
+            style={
+              url === '/configuration'
+                ? { color: 'var(--body-red)' }
+                : {}
+            }
+          >
+            Configuraciones
+          </Link>
+        </li>
+        <li>
+          <Link
             to="/users"
             style={
               url === '/users' ? { color: 'var(--body-red)' } : {}

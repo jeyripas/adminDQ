@@ -101,7 +101,7 @@ const TableOrders = ({
                     pedido: {product.name} {product.option},{' '}
                     {product.extras.length > 0 ? (
                       <p>
-                        pizzas:
+                        Sabores:
                         {product.pizzas.map(
                           (pizza) => ` ${pizza.name},`
                         )}

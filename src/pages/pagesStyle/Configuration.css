@@ -1,0 +1,69 @@
+.Configuration_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.Configuration_article {
+  width: 100%;
+  background-color: var(--body-darkBlue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em 1em;
+}
+
+.Configuration_article h1 {
+  color: var(--body-white);
+}
+
+/* Configuration_sectionOne */
+
+.Configuration_sectionOne {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Configuration_sectionOne_article {
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 3px 3px 10px -3px black;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.Configuration_sectionOne_article h2 {
+  background-color: var(--body-black);
+  color: var(--text-color-white);
+  font-size: 20px;
+  padding: 10px;
+}
+
+.Configuration_sectionOne_article div {
+  width: 100%;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Configuration_sectionOne_article p {
+  border-bottom: 1px solid gray;
+  padding: 10px;
+  font-weight: 600;
+}
+
+.Configuration_sectionOne_article button {
+  margin: 10px;
+  background-color: var(--body-black);
+  color: var(--text-color-white);
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+}

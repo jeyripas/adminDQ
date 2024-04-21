@@ -50,7 +50,7 @@ const UpdateProduct = ({ crud, setCrud, pizza, setclickEditImg }) => {
           />
         </div>
         <div className="crud__div">
-          <label htmlFor="description">Ingredientes:</label>
+          <label htmlFor="description">Incluye:</label>
           <textarea
             {...register('description')}
             id="description"
@@ -59,6 +59,19 @@ const UpdateProduct = ({ crud, setCrud, pizza, setclickEditImg }) => {
             required
             defaultValue={pizza.description}
           />
+        </div>
+        <div className="crud__div">
+          <label htmlFor="viewText">¿Mostrar título e Incluir?</label>
+          <select
+            {...register('viewText')}
+            id="viewText"
+            rows="4"
+            required
+            defaultValue={pizza.viewText}
+          >
+            <option value="active">Activado</option>
+            <option value="disable">Desactivado</option>
+          </select>
         </div>
         <div className="crud__div">
           <label htmlFor="label">Etiqueta:</label>

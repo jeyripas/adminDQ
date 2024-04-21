@@ -12,6 +12,7 @@ import YourOrders from './pages/YourOrders';
 import YourClients from './pages/YourClients';
 import DataClient from './pages/DataClient';
 import Products from './pages/Products';
+import Configuration from './pages/Configuration';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/deliveries" element={<Deliveries />} />
           <Route path="/your-clients" element={<YourClients />} />
           <Route path="/data-client/:id" element={<DataClient />} />
+          <Route path="/configuration" element={<Configuration />} />
         </Route>
       </Routes>
     </div>

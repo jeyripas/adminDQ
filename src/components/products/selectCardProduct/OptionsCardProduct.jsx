@@ -36,7 +36,6 @@ const OptionsCardProduct = ({
     }
   }
 
-  console.log(pizza);
   return (
     <div
       className={`optionProduct__container ${
@@ -104,7 +103,7 @@ const OptionsCardProduct = ({
             </ul>
           </div>
           <div className="optionProduct__optionExtraData__div">
-            <h4>Pizzas:</h4>
+            <h4>Sabores:</h4>
             <ul>
               {pizza.productPizzas.map((extra) => (
                 <li key={extra.id}>
@@ -256,7 +255,7 @@ const OptionsCardProduct = ({
             pizza={pizza}
           />
           <p onClick={() => setCrud('createPizzaProduct')}>
-            Crear Pizzas
+            Crear Sabores
           </p>
           <CreatePizzaProduct
             crud={crud}

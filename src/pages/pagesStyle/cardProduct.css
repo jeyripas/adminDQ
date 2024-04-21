@@ -1,114 +1,121 @@
 .cardProduct__contianer {
-    position: relative;
-    width: 330px;
+  position: relative;
+  width: 330px;
 }
 
 .cardProduct__imgContainer {
-    position: relative;
-    width: 100%;
-    height: 200px;
+  position: relative;
+  width: 100%;
+  height: 200px;
 }
 
 .cardProduct__imgContainer span {
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    padding: 0.5em;
-    font-size: 0.8em;
-    font-weight: 600;
-    color: var(--body-white);
-    border-radius: 0.5em 0.5em 0em 0em;
-    background: linear-gradient(180deg, black, rgba(0, 0, 0, 0.636), transparent);
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0.5em;
+  font-size: 0.8em;
+  font-weight: 600;
+  color: var(--body-white);
+  border-radius: 0.5em 0.5em 0em 0em;
+  background: linear-gradient(
+    180deg,
+    black,
+    rgba(0, 0, 0, 0.636),
+    transparent
+  );
 }
 
 .icon__editProductImg {
-    position: absolute;
-    right: 0.2em;
-    top: 0.2em;
-    font-size: 1.2em;
-    color: var(--body-white);
+  position: absolute;
+  right: 0.2em;
+  top: 0.2em;
+  font-size: 1.2em;
+  color: var(--body-white);
 }
 
-
 .icon__editProductImg:hover {
-    color: var(--body-red);
+  color: var(--body-red);
 }
 
 .cardProduct__imgContainer img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover !important;
-    border-radius: 0.5em;
+  width: 100%;
+  height: 100%;
+  object-fit: cover !important;
+  border-radius: 0.5em;
 }
 
 .cardProduct__label {
-    position: absolute;
-    top: 3em;
-    left: 0;
-    color: var(--body-white);
-    padding: 0.2em 1em;
-    z-index: 5;
+  position: absolute;
+  top: 3em;
+  left: 0;
+  color: var(--body-white);
+  padding: 0.2em 1em;
+  z-index: 5;
 }
 
 /* cardProduct__articleData */
 
 .cardProduct__articleData {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 0.3em;
-    position: absolute;
-    bottom: 0;
-    color: var(--body-white);
-    background: linear-gradient(0deg, black, rgba(0, 0, 0, 0.636), transparent);
-    padding: 0.5em;
-
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  position: absolute;
+  bottom: 0;
+  color: var(--body-white);
+  background: linear-gradient(
+    0deg,
+    black,
+    rgba(0, 0, 0, 0.636),
+    transparent
+  );
+  padding: 0.5em;
 }
 
 .cardProduct__articleData p {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    font-size: 0.9em;
-    color: var(--body-white);
-
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 0.9em;
+  color: var(--body-white);
 }
 
 /* cardProduct__optionsUpdateProduct */
 
 .cardProduct__optionsUpdateProduct {
-    background-color: var(--body-white);
-    display: flex;
-    justify-content: space-between;
-    overflow: hidden;
-    box-shadow: 0 0 0.3em 1px var(--text-color-gray);
-    border-radius: 0 0em 0.5em 0.5em;
-    padding: 0.6em 1em;
+  background-color: var(--body-white);
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  box-shadow: 0 0 0.3em 1px var(--text-color-gray);
+  border-radius: 0 0em 0.5em 0.5em;
+  padding: 0.6em 1em;
 }
 
 .cardProduct__optionsUpdateProduct p {
-    font-size: 0.9em;
-    font-weight: 600;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5em;
-    color: var(--body-black);
-    cursor: pointer;
-    transition: 0.5s ease;
+  font-size: 0.9em;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  color: var(--body-black);
+  cursor: pointer;
+  transition: 0.5s ease;
 }
 
 .cardProduct__optionsUpdateProduct p:hover {
-    color: var(--body-red);
-    transition: 0.5s ease;
+  color: var(--body-red);
+  transition: 0.5s ease;
 }
 
 .cardProduct__optionsUpdateProduct i {
-    font-size: 1.2em;
+  font-size: 2em;
 }
 
 .cardProduct__updateDeleteIcons {
-    display: flex;
-    gap: 1em;
+  display: flex;
+  gap: 1em;
 }

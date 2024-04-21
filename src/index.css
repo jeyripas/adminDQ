@@ -15,7 +15,7 @@
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #F1192F;
+  background-color: #f1192f;
   border-radius: 1em;
 }
 
@@ -25,12 +25,13 @@
 
 :root {
   --body-black: #000000;
-  --body-yeloow: #FEB901;
+  --body-yeloow: #feb901;
   --body-white: #ffffff;
   --body-gray: #212121;
-  --body-red: #F1192F;
-  --body-darkBlue: #121921;
+  --body-red: #f1192f;
+  --body-darkBlue: #151313;
   --text-color-black: #0b0b0b;
+  --text-color-white: #ffffff;
   --text-color-beige: #f8f8f8;
   --text-color-gray: rgb(202, 202, 202);
   --text-color-blue: #0242d8;
