@@ -95,7 +95,7 @@ const UpdateProduct = ({ crud, setCrud, pizza, setclickEditImg }) => {
           />
         </div>
         <button type="submit" className="crud__button">
-          Editar product
+          Editar producto
         </button>
       </form>
     </div>

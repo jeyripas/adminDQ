@@ -12,7 +12,7 @@ const Configuration = () => {
     const url = `${import.meta.env.VITE_URL_API}/openingHours/1`;
 
     axios
-      .get(url)
+      .get(url, config)
       .then((res) => setOpeningHoure(res.data.openingHoure))
       .catch((err) => console.log(err));
   }, [crud]);
